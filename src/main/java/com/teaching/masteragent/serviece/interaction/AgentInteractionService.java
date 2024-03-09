@@ -13,7 +13,7 @@ public class AgentInteractionService extends AbstractInteraction {
 
     @Override
     public boolean isThisInteractionType() {
-        return !nodeConfig.getMasterUrl().equals("none");
+        return !nodeConfig.getLocalUrl().equals(nodeConfig.getMasterUrl());
     }
 
     @Override
@@ -23,6 +23,16 @@ public class AgentInteractionService extends AbstractInteraction {
 
     @Override
     public String getMasterUrl() {
+        return this.nodeConfig.getMasterUrl();
+    }
+
+    @Override
+    public String getAgentUrls() {
+        return "this";
+    }
+
+    @Override
+    public String connectToMaster(String url) {
         return this.nodeConfig.getMasterUrl();
     }
 }

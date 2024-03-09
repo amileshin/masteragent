@@ -11,4 +11,5 @@ import org.springframework.context.annotation.PropertySource;
 @PropertySource(value = "classpath:application.properties")
 public class NodeConfig {
     private String masterUrl;
+    private String localUrl;
 }

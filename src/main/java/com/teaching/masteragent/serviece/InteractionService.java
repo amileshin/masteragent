@@ -25,4 +25,12 @@ public class InteractionService {
     public String getInteractionType() {
         return  interactionTypeService.interactionType();
     }
+
+    public String connectToMaster(String url) {
+        return interactionTypeService.connectToMaster(url);
+    }
+
+    public String getAgentUrls() {
+        return interactionTypeService.getAgentUrls();
+    }
 }
