@@ -4,7 +4,7 @@ import com.teaching.masteragent.config.NodeConfig;
 import org.springframework.stereotype.Service;
 
 @Service
-public class MasterInteractionService extends InteractionService {
+public class MasterInteractionService extends AbstractInteraction {
     private final NodeConfig nodeConfig;
 
     MasterInteractionService(NodeConfig nodeConfig) {
